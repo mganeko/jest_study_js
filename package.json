@@ -1,0 +1,16 @@
+{
+  "name": "int_closed_range",
+  "version": "1.0.0",
+  "description": "TDD study with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "doc": "npx jsdoc intClosedRange.js"
+  },
+  "author": "mganeko",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "jsdoc": "^3.6.6"
+  }
+}
