@@ -21,11 +21,18 @@ describe('整数閉区間IntClosedRange-[3,7]の場合', () => {
     range = new IntClosedRange(3, 7);
   });
 
-  test('整数閉区間は下端点と上端点を持つ。[3,7]の場合', () => {
+  test('下端点getLower()は3', () => {
     //const range = new IntClosedRange(3, 7);
     expect(range.getLower()).toBe(3);
+    //expect(range.getUpper()).toBe(7);
+  });
+
+  test('下端点getUpper()は7', () => {
+    //const range = new IntClosedRange(3, 7);
+    //expect(range.getLower()).toBe(3);
     expect(range.getUpper()).toBe(7);
   });
+
 
   test('整数閉区間は文字列表記を返す。[3,7]の場合', () => {
     //const range = new IntClosedRange(3, 7);
