@@ -3,10 +3,13 @@
 * @module intClosedRange
 */
 
-/** 整数閉区間 IntClosedRangクラス */
-module.exports = class IntClosedRange {
+/** 整数閉区間 IntClosedRangクラス
+ * @class IntClosedRang - 整数閉区間クラス
+ */
+class IntClosedRange {
   /**
-   * @class IntClosedRang - 整数閉区間クラス
+   * 整数閉区間クラスのインスタンスを生成
+   * @constructor
    * @param {number} lower - 下端点の値
    * @param {number} upper - 上端点の値
   */
@@ -48,3 +51,5 @@ module.exports = class IntClosedRange {
     return (this.lower <= value) && (value <= this.upper);
   }
 }
+
+module.exports = IntClosedRange;
