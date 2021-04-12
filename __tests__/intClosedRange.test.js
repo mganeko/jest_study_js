@@ -46,24 +46,40 @@ describe('整数閉区間IntClosedRange-[3,7]の場合', () => {
   //   expect(range.includes(7)).toBe(true);
   // });
 
-  test('指定した整数5を含むためincludes()はtrueを返す', () => {
-    expect(range.includes(5)).toBe(true);
-  });
+  // describe('includes()は指定した整数を含むかどうかを返す', () => {
+  //   test('5を含む。trueを返す', () => {
+  //     expect(range.includes(5)).toBe(true);
+  //   });
 
-  test('指定した整数2を含まない。includes()はfalseを返す', () => {
-    expect(range.includes(2)).toBe(false);
-  });
+  //   test('2を含まない。falseを返す', () => {
+  //     expect(range.includes(2)).toBe(false);
+  //   });
 
-  test('指定した整数8を含まない。includes()はfalseを返す', () => {
-    expect(range.includes(8)).toBe(false);
-  });
+  //   test('8を含まない。falseを返す', () => {
+  //     expect(range.includes(8)).toBe(false);
+  //   });
 
-  test('下端点3を含む。includes()はtrueを返す', () => {
-    expect(range.includes(3)).toBe(true);
-  });
+  //   test('下端点3を含む。trueを返す', () => {
+  //     expect(range.includes(3)).toBe(true);
+  //   });
 
-  test('上端点7を含む。includes()はtrueを返す', () => {
-    expect(range.includes(7)).toBe(true);
+  //   test('上端点7を含む。trueを返す', () => {
+  //     expect(range.includes(7)).toBe(true);
+  //   });
+  // });
+
+  // パラメタライズドテスト
+  describe('includes()は指定した整数を含むかどうかを返す', () => {
+    test.each([
+      [5, true, '含む'],
+      [2, false, '含まない'],
+      [8, false, '含まない'],
+      //[4, false, '含まない'], // defect injection
+      [3, true, '下端点3を含む'],
+      [7, true, '上端点7を含む'],
+    ])('.includes(%i)=%s (%s)', (n, expected) => {
+      expect(range.includes(n)).toBe(expected);
+    });
   });
 });
 
