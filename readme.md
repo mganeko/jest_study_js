@@ -3,6 +3,12 @@
 
 https://dxd2021.cto-a.org/program/time-table/a-1
 
+
+# Usage
+
+- test .... npm test
+- generate JDoc ... npm run doc 
+
 # ToDo
 
 - [x] 整数閉区間は下端点と上端点を持つ
